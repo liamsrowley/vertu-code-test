@@ -12,19 +12,28 @@ const createTab = (event) => {
   const tabClassName = '.tabs__content__item';
   const tabActiveClassName = 'tabs__content__item--active';
 
+  const currentTabHeader = event.target;
+  const tabId = currentTabHeader.getAttribute('data-tab-id');
+
+  const currentTabItem = document.querySelector(`[data-tab-item-id=${tabId}]`);
+  const tabList = document.querySelectorAll('[data-tab-item-id]');
+  const tabHeaders = document.querySelectorAll('[data-tab-id]');
+
   hideTabs();
-  const tab = event.target;
-  const tabId = tab.getAttribute('data-tab-id');
   displayCurrentTab();
 
   function hideTabs() {
-    document.querySelectorAll(tabHeaderClassName).forEach(tabHeader => {
+    tabHeaders.forEach(tabHeader => {
       tabHeader.classList.remove(tabHeaderActiveClassName);
+    })
+
+    tabList.forEach(tabItem => {
+      tabItem.classList.remove(tabActiveClassName);
     })
   }
 
   function displayCurrentTab() {
-    document.querySelector(`[data-tab-item-id=${tabId}]`).classList.add(tabActiveClassName);
-    tab.classList.add(tabHeaderActiveClassName);
+    currentTabItem.classList.add(tabActiveClassName);
+    currentTabHeader.classList.add(tabHeaderActiveClassName);
   }
 }
