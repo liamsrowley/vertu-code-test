@@ -2,3 +2,36 @@ i {
   font-style: normal;
   font-family: 'FontAwesome';
 }
+
+/***************************************
+*********** Global Styles **************
+***************************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  min-height: 200vh; /* Force scroll bar for comparison with design */
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.site-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/***************************************
+********** Site Header Styles **********
+***************************************/
