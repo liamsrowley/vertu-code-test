@@ -15,6 +15,7 @@ body {
   padding: 0;
   margin: 0;
   min-height: 200vh; /* Force scroll bar for comparison with design */
+  overflow-x: hidden;
 }
 
 a {
@@ -160,4 +161,47 @@ i {
   border-bottom: 1px solid #EFEFEF;
   color: #1B1B1B;
   font-weight: 500;
+}
+
+/***************************************
+********* Secondary Nav Styles *********
+***************************************/
+.secondary-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #003E78;
+  padding: 1.4rem 1.4rem 0 1.4rem;
+  color: white;
+  font-weight: 500;
+}
+
+.secondary-nav__dropdown {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.secondary-nav__list {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.secondary-nav__list__item {
+  flex: 0 0 auto;
+}
+
+.secondary-nav__list__item__link {
+  color: white;
+  font-weight: 500;
+  display: block;
+  margin: 0.8rem 3rem 0.8rem 0rem;
+  text-align: center;
+}
+
+.secondary-nav__list__item:nth-last-child(1) > .secondary-nav__list__item__link {
+  padding-right: 0;
 }
