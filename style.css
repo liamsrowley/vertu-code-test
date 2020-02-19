@@ -69,6 +69,14 @@ i {
   font-weight: 500;
 }
 
+.section {
+  width: 100%;
+}
+
+.section--padded {
+  padding: 2rem 1.2rem;
+}
+
 /***************************************
 ********** Site Header Styles **********
 ***************************************/
@@ -258,4 +266,60 @@ i {
 
 .hero__content__description {
   margin-bottom: 1.2rem;
+}
+
+/**************************************
+****** Tabbed Container Styles ********
+***************************************/
+.tabs__header,
+.tabs__header__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.tabs__header__list {
+  border: 1px solid #4B77A0;
+  border-radius: 5px;
+}
+
+.tabs__header__list__item {
+  border-right: 1px solid #4B77A0;
+  width: 50%;
+  text-align: center;
+  border-bottom: 1px solid #4B77A0;
+  padding: 0.6rem 0;
+}
+
+.tabs__header__list__item:nth-last-child(1) {
+  border-right: none;
+  border-bottom: 0;
+}
+
+.tabs__header__list__item:nth-last-child(2) {
+  border-bottom: 0;
+}
+
+.tabs__header__list__item:nth-last-child(3) {
+  border-right: 0;
+}
+
+.tabs__header__list__item--active,
+.tabs__header__list__item:hover {
+  background: #003E78;
+  color: white;
+}
+
+.tabs__content {
+  display: block;
+  padding: 1.6rem 1rem;
+}
+
+.tabs__content__item {
+  display: none;
+}
+
+.tabs__content__item--active {
+  display: block;
 }

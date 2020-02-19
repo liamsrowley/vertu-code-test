@@ -7,6 +7,7 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet" />
     <script src="menu.js"></script>
+    <script src="tabs.js"></script>
   </head>
   <body>
     <div class="site-container">
@@ -96,6 +97,32 @@
               without compromising everyday practicality."
             </p>
             <a href="#" class="button">Make an Enquiry</a>
+          </div>
+        </div>
+      </section>
+      <section class="section section--white section--padded">
+        <div class="tabs">
+          <nav class="tabs__header">
+            <ul class="tabs__header__list">
+              <li class="tabs__header__list__item" data-tab-id="dimensions">Dimensions</li>
+              <li class="tabs__header__list__item" data-tab-id="layout">Vehicle Layouts</li>
+              <li class="tabs__header__list__item" data-tab-id="colour">Colour</li>
+              <li class="tabs__header__list__item" data-tab-id="trim">Interior Trim</li>
+            </ul>
+          </nav>
+          <div class="tabs__content">
+            <div class="tabs__content__item tabs__content__item--active" data-tab-item-id="dimensions">
+              dimensions
+            </div>
+            <div class="tabs__content__item" data-tab-item-id="layout">
+              layout
+            </div>
+            <div class="tabs__content__item" data-tab-item-id="colour">
+              colour
+            </div>
+            <div class="tabs__content__item" data-tab-item-id="trim">
+              trim
+            </div>
           </div>
         </div>
       </section>
