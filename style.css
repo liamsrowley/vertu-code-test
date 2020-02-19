@@ -5,6 +5,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -16,6 +18,8 @@ body {
   margin: 0;
   min-height: 200vh; /* Force scroll bar for comparison with design */
   overflow-x: hidden;
+  line-height: 1.5;
+  letter-spacing: 0.002rem;
 }
 
 a {
@@ -35,6 +39,10 @@ li {
   margin: 0;
 }
 
+h1 {
+  font-size: 2.6rem;
+}
+
 i {
   font-style: normal;
   font-family: 'FontAwesome';
@@ -49,6 +57,16 @@ i {
   max-width: 1440px;
   margin: 0 auto;
   background-color: #FFFFFF;
+}
+
+.button {
+  display: block;
+  background: #017EDB;
+  padding: 1rem 0 1rem 0;
+  text-align: center;
+  border-radius: 3px;
+  color: white;
+  font-weight: 500;
 }
 
 /***************************************
@@ -198,10 +216,46 @@ i {
   color: white;
   font-weight: 500;
   display: block;
-  margin: 0.8rem 3rem 0.8rem 0rem;
+  margin-right: 3rem;
+  padding: 0.8rem 0;
   text-align: center;
+}
+
+.secondary-nav__list__item__link--active {
+  border-bottom: 5px solid white;
 }
 
 .secondary-nav__list__item:nth-last-child(1) > .secondary-nav__list__item__link {
   padding-right: 0;
+}
+
+/***************************************
+********** Hero Styles *****************
+***************************************/
+.hero {
+  background-image: url('images/billboard.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.2rem;
+}
+
+.hero__content {
+  background: rgba(255, 255, 255, 0.86);
+  border-radius: 3px;
+  padding: 1.6rem 2rem;
+  max-width: 420px;
+}
+
+.hero__content__title {
+  margin-bottom: 0.8rem;
+}
+
+.hero__content__description {
+  margin-bottom: 1.2rem;
 }
