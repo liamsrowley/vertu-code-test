@@ -9,6 +9,7 @@
     <script src="menu.js"></script>
     <script src="tabs.js"></script>
     <script src="colorSelector.js"></script>
+    <script src="gallery.js"></script>
   </head>
   <body>
     <div class="site-container">
@@ -258,10 +259,24 @@
         </div>
       </section>
 
-      <section class="section section--padded">
+      <section class="section">
         <div class="gallery">
-
+          <div class="gallery__item gallery__item--active" data-gallery-id="1">
+            <img src="images/gallery_1.jpg" class="gallery__item__image" alt="" />
+          </div>
+          <div class="gallery__item" data-gallery-id="2">
+            <img src="images/gallery_2.jpg" class="gallery__item__image" alt="" />
+          </div>
+          <div class="gallery__item" data-gallery-id="3">
+            <img src="images/gallery_3.jpg" class="gallery__item__image" alt="" />
+          </div>
+          <span class="gallery__item__counter" data-gallery-counter></span>
+          <i class="fas fa-chevron-left gallery__icon gallery__icon--left" data-gallery-prev></i>
+          <i class="fas fa-chevron-right gallery__icon gallery__icon--right" data-gallery-next></i>
         </div>
+      </section>
+
+      <section class="section section--padded">
         <p class="description description--large">
           The Versa Connect takes these attributes and focuses on extending them
           seamlessly into the wheelchair accessible aspects of our vehicle. It is
