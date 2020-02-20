@@ -56,17 +56,21 @@ i {
 .site-container {
   max-width: 1440px;
   margin: 0 auto;
-  background-color: #FFFFFF;
 }
 
 .button {
   display: block;
   background: #017EDB;
-  padding: 1rem 0 1rem 0;
+  padding: 0.8rem 2rem;
   text-align: center;
   border-radius: 3px;
   color: white;
   font-weight: 500;
+}
+
+.button--centered {
+  width: max-content;
+  margin: 0 auto;
 }
 
 .section {
@@ -74,11 +78,15 @@ i {
 }
 
 .section--padded {
-  padding: 2rem 1.2rem;
+  padding: 2rem 1.6rem;
 }
 
 .section--white {
-  background: white;e
+  background: white;
+}
+
+p {
+  margin-bottom: 2rem;
 }
 
 /***************************************
@@ -252,9 +260,13 @@ i {
   min-height: 70vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding: 2rem 1.2rem;
+}
+
+.hero--bottom {
+  background-image: url('images/keep_going_billboard.jpg');
 }
 
 .hero__content {
@@ -293,10 +305,9 @@ i {
 .tabs__header__list__item {
   border-right: 1px solid #4B77A0;
   flex-basis: 50%;
-  flex-grow: 1;
   text-align: center;
   border-bottom: 1px solid #4B77A0;
-  padding: 0.6rem 1.6rem;
+  padding: 0.6rem 1.2rem;
 }
 
 .tabs__header__list__item:nth-last-child(1) {
@@ -329,7 +340,8 @@ i {
 
 .tabs__content__item--active {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 /**************************************
@@ -337,13 +349,15 @@ i {
 ***************************************/
 
 .dimensions__image {
-  width: 100%;
+  flex-grow: 1;
+  max-width: 100%;
 }
 
 .dimensions-table {
   border-collapse: collapse;
   box-sizing: border-box;
   margin-bottom: 2rem;
+  flex-grow: 5;
 }
 
 .dimensions-table__header {
@@ -374,4 +388,65 @@ i {
 
 .dimensions-table__column--right-border {
   border-right: 1px solid #AFB2B3;
+}
+
+/**************************************
+************ Footer Styles ************
+***************************************/
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: #43484D;
+  padding: 3.2rem 1.6rem;
+}
+
+.footer__left {
+  flex-grow: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: fl
+}
+
+.footer__right {
+  flex-grow: 1;
+}
+
+.footer__bottom {
+  flex-grow: 1;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.footer__left__text {
+  color: #9FA7AF;
+  font-size: 0.9rem;
+  max-width: 420px;
+}
+
+.footer__nav,
+.footer__nav__list {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.footer__nav__list__group {
+  flex-grow: 33%;
+  flex-basis: 100%;
+  flex-shrink: 1;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__nav__list__item__link {
+  display: block;
+  color: white;
+  padding: 0.4rem 0;
+  font-size: 1.12rem;
+}
+
+.footer__bottom__text {
+  color: #777D84;
 }
