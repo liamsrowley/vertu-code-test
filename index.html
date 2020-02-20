@@ -8,6 +8,7 @@
     <link href="style.css" rel="stylesheet" />
     <script src="menu.js"></script>
     <script src="tabs.js"></script>
+    <script src="colorSelector.js"></script>
   </head>
   <body>
     <div class="site-container">
@@ -115,7 +116,7 @@
             </ul>
           </nav>
           <div class="tabs__content">
-            <div class="tabs__content__item tabs__content__item--active" data-tab-item-id="dimensions">
+            <div class="tabs__content__item" data-tab-item-id="dimensions">
               <table class="dimensions-table">
                 <thead class="dimensions-table__header">
                   <tr>
@@ -170,11 +171,39 @@
                 <p class="vehicle-layout__description">* Wheelchair user can sit a little further forward (not as forward as Row 2 seats)</p>
               </div>
             </div>
-            <div class="tabs__content__item" data-tab-item-id="colour">
-              colour
+            <div class="tabs__content__item tabs__content__item--active" data-tab-item-id="colour">
+              <img src="images/vehicle_red.webp" class="vehicle-color" data-swatch-image alt="Vehicle Colour" />
+              <div class="color-selector" data-color-selector>
+                <div class="color-selector__group color-selector__group--active" data-color-group="nonMetallic">
+                  <div class="color-selector__swatch color-selector__swatch--active" data-swatch-name="red" data-swatch-color="#BA1F1F">
+                    <i class="far fa-check"></i>
+                  </div>
+                  <div class="color-selector__swatch" data-swatch-name="black" data-swatch-color="#000000">
+                    <i class="far fa-check"></i>
+                  </div>
+                  <div class="color-selector__swatch" data-swatch-name="silver" data-swatch-color="#999999">
+                    <i class="far fa-check"></i>
+                  </div>
+                </div>
+                <div class="color-selector__group" data-color-group="metallic">
+                  <div class="color-selector__swatch color-selector__swatch--active" data-swatch-name="red" data-swatch-color="#BA1F1F">
+                    <i class="far fa-check"></i>
+                  </div>
+                  <div class="color-selector__swatch" data-swatch-name="black" data-swatch-color="#000000">
+                    <i class="far fa-check"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="color-type">
+                <div class="color-type__item color-type__item--active" data-color-group-control="nonMetallic">
+                  <label class="color-type__item__label">Non metallic</label>
+                </div>
+                <div class="color-type__item" data-color-group-control="metallic">
+                  <label class="color-type__item__label">Metallic</label>
+                </div>
+              </div>
             </div>
             <div class="tabs__content__item" data-tab-item-id="trim">
-              trim
             </div>
           </div>
           <a href="#" class="button button--small button--centered">View our Versa Connect Offers</a>

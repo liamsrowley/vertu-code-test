@@ -503,6 +503,7 @@ p {
   border-right: 1px solid #AFB2B3;
 }
 
+/* Vehicle Layout */
 .vehicle-layout:nth-child(1) {
   margin-bottom: 2rem;
 }
@@ -513,6 +514,113 @@ p {
 
 .vehicle-layout__description {
   margin: 0;
+}
+
+/* Vehicle Colors */
+.vehicle-color {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.color-selector {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1.6rem;
+}
+
+.color-selector__swatch {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.color-selector__swatch > i {
+  display: none;
+}
+
+.color-selector__swatch--active > i {
+  display: block;
+  color: white;
+}
+
+.color-selector__swatch:hover {
+  cursor: pointer;
+}
+
+.color-selector__swatch::after {
+  content: '';
+  border: 1px solid #CCC;
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  transform: translate(-3px, -3px);
+}
+
+.color-type {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.color-type__item {
+  flex-grow: 1;
+  padding: 1rem 0;
+  border-bottom: 1px solid #DDDDDD;
+  color: #666666;
+  font-weight: 500;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.color-type__item:nth-last-child(1) {
+  flex-grow: 5;
+  margin-left: 2rem;
+}
+
+.color-type__item--active,
+.color-type__item:hover {
+  border-color: black;
+  color: black;
+}
+
+.color-selector__group {
+  display: none;
+}
+
+.color-selector__group--active {
+  display: flex;
+}
+
+@media (min-width: 1280px) {
+  .vehicle-color {
+    max-width: 80%;
+  }
+
+  .color-selector__swatch {
+    height: 44px;
+    width: 44px;
+  }
+
+  .color-selector__swatch::after {
+    height: 50px;
+    width: 50px;
+  }
 }
 
 /**************************************
