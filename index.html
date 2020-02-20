@@ -11,6 +11,7 @@
   </head>
   <body>
     <div class="site-container">
+
       <header class="site-header">
           <div class="logo-container">
             <img src="images/logo.webp" class="logo-container__logo" alt="Website Logo" />
@@ -62,6 +63,7 @@
             </div>
           </div>
       </header>
+
       <nav class="secondary-nav">
         <div class="secondary-nav__dropdown">Versa Connect</div>
         <ul class="secondary-nav__list">
@@ -87,6 +89,7 @@
           </li>
         </ul>
       </nav>
+
       <section class="section">
         <div class="hero">
           <div class="hero__content">
@@ -100,6 +103,7 @@
           </div>
         </div>
       </section>
+
       <section class="section section--white section--padded">
         <div class="tabs">
           <nav class="tabs__header">
@@ -112,7 +116,48 @@
           </nav>
           <div class="tabs__content">
             <div class="tabs__content__item tabs__content__item--active" data-tab-item-id="dimensions">
-              dimensions
+              <table class="dimensions-table">
+                <thead class="dimensions-table__header">
+                  <tr>
+                    <td></td>
+                    <td>Short</td>
+                    <td>Long</td>
+                  </tr>
+                </thead>
+                <tbody class="dimensions-table__body">
+                  <tr class="dimensions-table__row">
+                    <td class="dimensions-table__column--highlighted">Entry Height</td>
+                    <td class="dimensions-table__column--right-border">1,373mm</td>
+                    <td>1,373mm</td>
+                  </tr>
+                  <tr class="dimensions-table__row">
+                    <td class="dimensions-table__column--highlighted">Ramp Length</td>
+                    <td class="dimensions-table__column--right-border">1,010mm</td>
+                    <td>1,010mm</td>
+                  </tr>
+                  <tr class="dimensions-table__row">
+                    <td class="dimensions-table__column--highlighted">Ramp Width</td>
+                    <td class="dimensions-table__column--right-border">755mm</td>
+                    <td>755mm</td>
+                  </tr>
+                  <tr class="dimensions-table__row">
+                    <td class="dimensions-table__column--highlighted">Channel Length</td>
+                    <td class="dimensions-table__column--right-border">1,580mm</td>
+                    <td>1,580mm</td>
+                  </tr>
+                  <tr class="dimensions-table__row">
+                    <td class="dimensions-table__column--highlighted">External Height</td>
+                    <td class="dimensions-table__column--right-border">1,852mm</td>
+                    <td>1,845mm</td>
+                  </tr>
+                  <tr class="dimensions-table__row">
+                    <td class="dimensions-table__column--highlighted">External Length</td>
+                    <td class="dimensions-table__column--right-border">4,418mm</td>
+                    <td>4,818mm</td>
+                  </tr>
+                </tbody>
+              </table>
+              <img src="images/dimensions.jpg" class="dimensions__image" alt="Vehicle Dimensions" />
             </div>
             <div class="tabs__content__item" data-tab-item-id="layout">
               layout
@@ -126,6 +171,7 @@
           </div>
         </div>
       </section>
+
     </div>
   </body>
 </html>

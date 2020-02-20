@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
   background: #EEEFF1;
@@ -75,6 +75,10 @@ i {
 
 .section--padded {
   padding: 2rem 1.2rem;
+}
+
+.section--white {
+  background: white;e
 }
 
 /***************************************
@@ -277,6 +281,8 @@ i {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .tabs__header__list {
@@ -286,10 +292,11 @@ i {
 
 .tabs__header__list__item {
   border-right: 1px solid #4B77A0;
-  width: 50%;
+  flex-basis: 50%;
+  flex-grow: 1;
   text-align: center;
   border-bottom: 1px solid #4B77A0;
-  padding: 0.6rem 0;
+  padding: 0.6rem 1.6rem;
 }
 
 .tabs__header__list__item:nth-last-child(1) {
@@ -313,7 +320,7 @@ i {
 
 .tabs__content {
   display: block;
-  padding: 1.6rem 1rem;
+  padding: 1.6rem 0rem;
 }
 
 .tabs__content__item {
@@ -321,5 +328,50 @@ i {
 }
 
 .tabs__content__item--active {
-  display: block;
+  display: flex;
+  flex-direction: column;
+}
+
+/**************************************
+****** Tab Sections Styles ************
+***************************************/
+
+.dimensions__image {
+  width: 100%;
+}
+
+.dimensions-table {
+  border-collapse: collapse;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+}
+
+.dimensions-table__header {
+  padding: 1rem;
+  font-weight: 500;
+}
+
+.dimensions-table__body {
+  border: 1px solid #AFB2B3;
+}
+
+.dimensions-table__row {
+  border-bottom: 1px solid #AFB2B3;
+}
+
+.dimensions-table__row:nth-last-child(1) {
+  border: none;
+}
+
+.dimensions-table td {
+  padding: 0.8rem;
+}
+
+.dimensions-table__column--highlighted {
+  background: #E5E8E8;
+  max-width: 20%;
+}
+
+.dimensions-table__column--right-border {
+  border-right: 1px solid #AFB2B3;
 }
