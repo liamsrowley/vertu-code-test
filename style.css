@@ -249,6 +249,7 @@ p {
   .site-header__right__bottom {
     flex-direction: row;
     margin: 0;
+    height: 100%;
   }
 
   .primary-nav,
@@ -265,8 +266,14 @@ p {
     display: none;
   }
 
+  .primary-nav__list__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .primary-nav__list__item__link {
-    padding: 1rem 1rem;
+    padding: 0;
     border: none;
   }
 }
