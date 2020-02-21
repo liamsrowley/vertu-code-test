@@ -16,7 +16,6 @@ body {
   background: #EEEFF1;
   padding: 0;
   margin: 0;
-  min-height: 200vh; /* Force scroll bar for comparison with design */
   overflow-x: hidden;
   line-height: 1.5;
   letter-spacing: 0.004rem;
@@ -150,8 +149,18 @@ p {
 .site-header__right__icons {
   display: flex;
   flex-direction: row;
-  width: 60%;
+  width: 70%;
   justify-content: space-between;
+}
+
+.site-header__right__icons > i {
+  padding: 0 0.6rem;
+}
+
+.site-header__right__icons > i:hover {
+  background: #eee;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 .site-header__right-content {
@@ -167,6 +176,11 @@ p {
   transition: all 0.2s ease;
 }
 
+.site-header__right__top__link {
+  display: none;
+  font-size: 0.8rem;
+}
+
 .site-header__right-content--active {
   transform: translateY(0%);
   transition: all 0.2s ease;
@@ -175,6 +189,8 @@ p {
 .site-header__right__top {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
 }
 
 .control-group {
@@ -194,7 +210,7 @@ p {
 .control-group__controls {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .control-group__control {
@@ -209,6 +225,14 @@ p {
 .control-group__control:hover {
   border: 1px solid #AAAAAA;
   cursor: pointer;
+}
+
+.site-header__right__top__link {
+  padding: 0 1rem;
+}
+
+.contact-info {
+  display: none;
 }
 
 .site-header__right__bottom {
@@ -248,10 +272,34 @@ p {
   }
 
   .site-header__right__top {
-    padding: 0.3rem 2rem;
     border-bottom: 1px solid #EFEFEF;
     align-items: center;
     justify-content: flex-end;
+  }
+
+  .contact-info {
+    display: block;
+    padding: 0.4rem 0.8rem;
+    color: white;
+    background: #14a65b;
+    font-size: 0.8rem;
+  }
+
+  .contact-info:hover {
+    background: #1cc96f;
+    cursor: pointer;
+  }
+
+  .site-header__right__top__link {
+    display: block;
+  }
+
+  .contact-info > i {
+    font-size: 0.9rem;
+  }
+
+  .contact-info > span {
+    padding: 0 0.3rem;
   }
 
   .site-header__right__bottom {
@@ -283,6 +331,10 @@ p {
   .primary-nav__list__item__link {
     padding: 0;
     border: none;
+  }
+
+  .primary-nav__list__item__link--hideOnLargeScreen {
+    display: none;
   }
 }
 
@@ -340,10 +392,6 @@ p {
   border-bottom: 5px solid white;
 }
 
-.secondary-nav__list__item:nth-last-child(1) > .secondary-nav__list__item__link {
-  padding-right: 0;
-}
-
 @media (min-width: 1280px) {
   .secondary-nav {
     flex-direction: row;
@@ -367,6 +415,10 @@ p {
     display: block;
     padding: 1.3rem 1.6rem;
     margin-right: 0.4rem;
+  }
+
+  .secondary-nav__list__item__link:nth-last-child(1) {
+    margin-right: 0;
   }
 }
 /***************************************
