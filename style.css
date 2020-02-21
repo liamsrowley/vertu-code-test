@@ -206,6 +206,11 @@ p {
   margin-right: 0.1rem;
 }
 
+.control-group__control:hover {
+  border: 1px solid #AAAAAA;
+  cursor: pointer;
+}
+
 .site-header__right__bottom {
   display: flex;
   flex-direction: column;
@@ -217,7 +222,6 @@ p {
   display: flex;
   flex-direction: column;
 }
-
 
 .primary-nav__list__item__link {
   display: block;
@@ -485,7 +489,7 @@ p {
 
 .dimensions__image {
   max-width: 100%;
-  width: 48%;
+  width: 100%;
   object-fit: contain;
 }
 
@@ -494,7 +498,7 @@ p {
   box-sizing: border-box;
   margin-bottom: 2rem;
   z-index: 10;
-  width: 48%;
+  width: 100%;
 }
 
 .dimensions-table__header {
@@ -525,6 +529,16 @@ p {
 
 .dimensions-table__column--right-border {
   border-right: 1px solid #AFB2B3;
+}
+
+@media (min-width: 1280px) {
+  .dimensions__image {
+    width: 48%;
+  }
+
+  .dimensions-table {
+    width: 48%;
+  }
 }
 
 /* Vehicle Layout */
@@ -751,9 +765,17 @@ p {
   position: absolute;
   top: 50%;
   z-index: 10;
-  font-size: 2.4rem;
-  color: #EEEEEE;
+  font-size: 1.6rem;
+  color: white;
+  border-radius: 3px;
+  background: #333333;
+  padding: 0.4rem 1rem;
   transform: translateY(-50%);
+}
+
+.gallery__icon:hover {
+  cursor: pointer;
+  background: #000000;
 }
 
 .gallery__icon--left {
@@ -822,6 +844,10 @@ p {
   display: block;
   color: white;
   padding: 0.2rem 0;
+}
+
+.footer__nav__list__item__link:hover {
+  
 }
 
 .footer__bottom__text {
