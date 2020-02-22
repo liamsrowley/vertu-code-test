@@ -628,6 +628,7 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   width: 100%;
   margin-bottom: 1.6rem;
@@ -642,6 +643,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 0.8rem;
 }
 
 .color-selector__swatch:hover:after {
@@ -710,6 +712,8 @@ p {
 
 .color-selector__group--active {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 @media (min-width: 1280px) {
